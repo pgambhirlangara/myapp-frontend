@@ -51,7 +51,7 @@ const SignupModal = () => {
     !emailError &&
       !passwordError &&
       !emptyError &&
-      fetch("http://localhost:3001/signup", {
+      fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api//signup", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
@@ -67,7 +67,7 @@ const SignupModal = () => {
             history.goBack("/");
             fetchSessionfromDB();
           } else {
-            fetch("http://localhost:3001/signup", {
+            fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api//signup", {
               credentials: "include",
             });
           }
@@ -89,7 +89,7 @@ const SignupModal = () => {
   };
 
   const fetchSessionfromDB = () => {
-    fetch("http://localhost:3001/me", {
+    fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api//me", {
       credentials: "include",
     })
       .then((res) => {

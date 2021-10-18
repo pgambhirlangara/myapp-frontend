@@ -25,13 +25,13 @@ const Header = () => {
   ];
 
   const postLogoutData = () => {
-    fetch("http://localhost:3001/logout", {
+    fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api//logout", {
       method: "POST",
       headers: { "content-type": "application/json" },
       credentials: "include",
     })
       .then((res) => {
-        fetch("http://localhost:3001/logout", {
+        fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api//logout", {
           headers: { "content-type": "application/json" },
           credentials: "include",
         }).then((res) => {
