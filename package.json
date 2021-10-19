@@ -2,7 +2,7 @@
   "name": "myapp-frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api//",
+  "proxy": "http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",

@@ -43,7 +43,7 @@ const LoginModal = () => {
   const materialUIClasses = useStyles();
 
   const postLoginData = () => {
-    fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api//login", {
+    fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api/login", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -57,7 +57,7 @@ const LoginModal = () => {
           history.goBack("/");
           fetchSessionfromDB();
         } else {
-          fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api//login", {
+          fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api/login", {
             credentials: "include",
           });
         }
@@ -72,7 +72,7 @@ const LoginModal = () => {
   };
 
   const fetchSessionfromDB = () => {
-    fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api//me", {
+    fetch("http://ec2-18-116-199-162.us-east-2.compute.amazonaws.com/api/me", {
       credentials: "include",
     })
       .then((res) => {
